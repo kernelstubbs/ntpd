@@ -10,7 +10,7 @@ HEALTHCHECK CMD ntpctl -s status || exit 1
 
 # Expose NTP port
 EXPOSE 123/udp
-VOLUME /etc/ntpd.conf
+#VOLUME /etc/ntpd.conf
 
 # Start ntpd with verbose logging
 ENTRYPOINT [ "/bin/sh", "/usr/sbin/ntpd -vds" ]
